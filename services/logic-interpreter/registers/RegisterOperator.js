@@ -1,8 +1,8 @@
-const And = require("../symbols/operators/AND")
-const Biimplication = require("../symbols/operators/Biimplication")
-const Implication = require("../symbols/operators/Implication")
-const Not = require("../symbols/operators/Not")
-const Or = require("../symbols/operators/Or")
+const And = require("../../../symbols/operators/AND")
+const Biimplication = require("../../../symbols/operators/Biimplication")
+const Implication = require("../../../symbols/operators/Implication")
+const Not = require("../../../symbols/operators/Not")
+const Or = require("../../../symbols/operators/Or")
 
 class RegisterOperator {
     static registers = { }

@@ -9,7 +9,7 @@
 
 // (A v B) ^ C
 
-const SintaxError = require("../../errors/SintaxError")
+const SintaxError = require("../../services/logic-interpreter/errors/SintaxError")
 const GrammarUtil = require("../GrammarUtil")
 
 class SintaxAnalyzer {

@@ -1,7 +1,7 @@
 const GrammarUtil = require("../GrammarUtil")
 const Token = require("../token/Token")
 const TokenEnum = require("../token/TokenEnum")
-const LexicalError = require("../../errors/LexicalError")
+const LexicalError = require("../../services/logic-interpreter/errors/LexicalError")
 
 class LexicalTokenizer {
 

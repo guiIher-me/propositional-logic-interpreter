@@ -3,9 +3,9 @@ const cors = require('cors')
 const app = express()
 const port = 3000
 
-const Register = require("./registers/Register")
+const Register = require("./services/logic-interpreter/registers/Register")
 const Interpreter = require('./interpreter/Interpreter')
-const BadInputError = require('./errors/BadInputError')
+const BadInputError = require('./services/logic-interpreter/errors/BadInputError')
 
 app.use(cors())
 app.use(express.json())

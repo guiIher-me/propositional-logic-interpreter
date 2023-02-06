@@ -1,4 +1,4 @@
-const RegisterOperator = require("../../registers/RegisterOperator")
+const RegisterOperator = require("../../services/logic-interpreter/registers/RegisterOperator")
 const SymbolUtil = require("../../symbols/SymbolUtil")
 
 class PrecedenceTable {
