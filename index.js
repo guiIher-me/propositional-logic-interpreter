@@ -1,35 +1,33 @@
-const LexicalAnalyzer = require("./interpreter/lexical/LexicalAnalyzer")
-const PostfixConverter = require("./interpreter/notation/PostfixConverter")
-const SintaxAnalyzer = require("./interpreter/sintax/SintaxAnalyzer")
+const express = require('express')
+const cors = require('cors')
+const app = express()
+const port = 3000
+
 const Register = require("./registers/Register")
-const TruthTable = require("./interpreter/table/TruthTable")
-const BadInputError = require("./errors/BadInputError")
+const Interpreter = require('./interpreter/Interpreter')
+const BadInputError = require('./errors/BadInputError')
 
-;(async () => {
+app.use(cors())
+app.use(express.json())
+
+app.post('/interpreter', async (req, res, next) => {
+    const {input} = req.body || null
+    if(!input) req.status(400).send({error: "Field 'input' is missing!"})
+
     try {
-        await Register.registerAll()
-        const input = "(~A v B) ^ C"
-
-        const tokenizer = new LexicalAnalyzer(input)
-        const tokens = await tokenizer.getTokens()
-
-        const sintax = new SintaxAnalyzer(tokens)
-        await sintax.analyze()
-
-        const converter = new PostfixConverter(tokens)
-        const postfix_stack = await converter.converte()
-
-        const generator = new TruthTable(postfix_stack, input)
-        const table = generator.generate()
-        
-        console.table(table)
-        
-    } catch (error) {
+        const table = await Interpreter.interprete(input)
+        res.status(200).send({table})
+    } catch(error) {
         if(error instanceof BadInputError) {
-            console.log(error.message)
+            res.status(422).send({error: error.message})
         } else {
             console.log(error)
-            console.log("Internal Server Error!")
+            res.status(500).send({error: 'Internal Server Error'})
         }
     }
-})()
+})
+
+app.listen(port, () => {
+    console.log(`Listening port ${port}`)
+    Register.registerAll()
+})

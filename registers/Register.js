@@ -1,8 +1,8 @@
 const RegisterOperator = require("./RegisterOperator")
 
 class Register {
-    static async registerAll() {
-        await RegisterOperator.registerAll()
+    static registerAll() {
+        RegisterOperator.registerAll()
     }
 }
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Propositional Logic Interpreter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form id="form">
+        <label for="input">Formula</label>
+        <input type="text" id="input" name="input">
+        <input type="submit" value="Calculate">
+    </form>
+
+    <div id="output"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    const submit = async (event) => {
+        event.preventDefault()
+
+        const input = document.querySelector("#input").value
+        if(!input) return
+        
+        const response = await fetch('http://localhost:3000/interpreter', {
+            mode: 'cors',
+            method: 'POST',
+            cache: 'no-cache',
+            body: JSON.stringify({input}),
+            headers: {
+                "Accept": 'application/json',
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+
+        const data = await response.json()
+        const table = data.table
+        console.table(table)
+    }
+
+    document.addEventListener("submit", submit)
+
+</script>
