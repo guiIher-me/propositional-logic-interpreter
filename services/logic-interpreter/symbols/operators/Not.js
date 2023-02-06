@@ -1,4 +1,4 @@
-const LogicEnum = require("../../common/LogicEnum")
+const LogicEnum = require("../../utils/LogicEnum")
 const OperatorUnary = require("./OperatorUnary")
 
 class Not extends OperatorUnary {

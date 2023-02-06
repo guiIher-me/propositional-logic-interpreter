@@ -1,4 +1,4 @@
-const String = require("../../common/String")
+const String = require("../../utils/String")
 
 class LexicalPreprocess {
     static execute(input) {

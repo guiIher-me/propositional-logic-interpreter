@@ -1,4 +1,4 @@
-const RegisterOperator = require("../../services/logic-interpreter/registers/RegisterOperator")
+const RegisterOperator = require("../../registers/RegisterOperator")
 const SymbolUtil = require("../../symbols/SymbolUtil")
 
 class PrecedenceTable {
@@ -29,4 +29,3 @@ class PrecedenceTable {
 }
 
 module.exports = PrecedenceTable
-

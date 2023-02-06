@@ -1,4 +1,4 @@
-const RegisterOperator = require("../../services/logic-interpreter/registers/RegisterOperator")
+const RegisterOperator = require("../../registers/RegisterOperator")
 const OperatorUnary = require("../../symbols/operators/OperatorUnary")
 const GrammarUtil = require("../GrammarUtil")
 const TableIterator = require("./TableIterator")
