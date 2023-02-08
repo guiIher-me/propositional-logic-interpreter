@@ -20,6 +20,12 @@ class RegisterOperator {
         RegisterOperator.registers[operator.getSymbol()] = operator
     }
 
+    static getSymbolsByFilter(filter) {
+        const registers = Object.values(this.registers)
+        const filtered_registers = registers.filter(register => filter(register))
+        return filtered_registers.map(register => register.getSymbol())
+    }
+
     static getBySymbol(symbol) {
         return RegisterOperator.registers[symbol]
     }

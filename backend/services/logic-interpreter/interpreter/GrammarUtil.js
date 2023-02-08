@@ -1,4 +1,6 @@
 const RegisterOperator = require("../registers/RegisterOperator")
+const OperatorBinary = require("../symbols/operators/OperatorBinary")
+const OperatorUnary = require("../symbols/operators/OperatorUnary")
 
 class GrammarUtil {
     static EOI = 'END_OF_INPUT'
@@ -30,7 +32,15 @@ class GrammarUtil {
     }
 
     static isBinaryOperator(item) {
-        return ['^', 'v', '->', '<->'].includes(item)
+        const filter = (register => register instanceof OperatorBinary)
+        const symbols = RegisterOperator.getSymbolsByFilter(filter)
+        return symbols.includes(item)
+    }
+
+    static isUnaryOperator(item) {
+        const filter = (register => register instanceof OperatorUnary)
+        const symbols = RegisterOperator.getSymbolsByFilter(filter)
+        return symbols.includes(item)
     }
 
     static isNot(item) {

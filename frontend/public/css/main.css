@@ -21,6 +21,12 @@ body {
     display: none !important;
 }
 
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* Calculator
    ========================================================================== */
 

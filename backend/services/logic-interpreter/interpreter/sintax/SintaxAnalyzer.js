@@ -74,7 +74,7 @@ class SintaxAnalyzer {
         if(GrammarUtil.isID(this.lookahead))
             this.match(this.lookahead)
         else
-            throw new SintaxError(`Expected ID received '${this.lookahead}' at position ${this.lookposition}`)
+            throw new SintaxError(`Expected VARIABLE, received '${this.lookahead}' at position ${this.lookposition}`)
     }
 }
 

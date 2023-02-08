@@ -1,6 +1,6 @@
 const OperatorBinary = require("./OperatorBinary")
 
-class And extends OperatorBinary {
+class And extends OperatorBinary {   
     static execute(p, q) {
         return p & q
     }
