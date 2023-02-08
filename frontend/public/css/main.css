@@ -1,5 +1,5 @@
 /**
- * @Author: Guilherme Cardoso <guilherme.cardoso-oliveira@unesp.br>
+ * @Author: Guilherme Oliveira <guilherme.cardoso-oliveira@unesp.br>
  * @license: MIT 
  */
 
@@ -26,6 +26,12 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
 
 /* Calculator
    ========================================================================== */
@@ -117,6 +123,10 @@ body {
 /* Table
    ========================================================================== */
 
+#container-table {
+    margin-bottom: 30px;
+}
+
 table {
     text-align: center;
     border-collapse: collapse;
@@ -137,4 +147,37 @@ table th {
 
 table tr:nth-child(even){
     background-color: #f2f2f2;
+}
+
+td.data-false {
+    color: #f44336;
+}
+
+td.data-true {
+    color: #01a108;
+}
+
+
+/* Footer
+   ========================================================================== */
+
+footer {
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-top: 50px;
+    padding: 3px 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: #58ce7a;
+}
+
+footer a:hover {
+    color: #5f58aa 
 }

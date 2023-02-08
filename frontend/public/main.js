@@ -144,7 +144,7 @@ const generateRow = (array) => {
 }
 
 const generateRowHeader = (array) => {
-    let row = `<tr class="row-header">`
+    let row = `<tr class="row-header sticky">`
     array.forEach(data => row += generateColHeader(data))
     row += "</tr>"
     return row
