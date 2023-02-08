@@ -7,8 +7,6 @@
  * ID ::= 'A' | 'B' | 'C' | 'D' | 'E' | 'F'
  */
 
-// (A v B) ^ C
-
 const SintaxError = require("../../errors/SintaxError")
 const GrammarUtil = require("../GrammarUtil")
 
@@ -40,7 +38,7 @@ class SintaxAnalyzer {
 
     match(expected) {
         if(this.lookahead != expected)
-            throw new SintaxError(`Expected '${expected}' received '${this.lookahead}' at position ${this.lookposition}`)
+            throw new SintaxError(`Expected '${expected}', received '${this.lookahead}' at position ${this.lookposition}`)
         this.next()
     }
 
@@ -71,6 +69,7 @@ class SintaxAnalyzer {
         }
     }
 
+    // ID ::= 'A' | 'B' | 'C' | 'D' | 'E' | 'F'
     ID() {
         if(GrammarUtil.isID(this.lookahead))
             this.match(this.lookahead)

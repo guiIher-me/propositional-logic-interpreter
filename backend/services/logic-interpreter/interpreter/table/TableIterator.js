@@ -27,6 +27,10 @@ class TableIterator {
     hasNext() {
         return this.iteration < this.total_iterations
     }
+
+    getIteration() {
+        return this.iteration
+    }
 }
 
 module.exports = TableIterator

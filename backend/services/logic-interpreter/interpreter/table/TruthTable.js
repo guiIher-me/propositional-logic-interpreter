@@ -9,21 +9,29 @@ class TruthTable {
         this.input = input
     }
 
-    static getIDs(tokens) {
-        return tokens.filter((token) => GrammarUtil.isID(token))
+    static getUniqueIDs(symbols) {
+        const checked = {}
+        return symbols.filter((symbol) => {
+            const isID = GrammarUtil.isID(symbol)
+            const valid = isID && !checked[symbol]
+
+            if(valid) checked[symbol] = true
+            return valid
+        })
     }
 
     generate() {
-        const ids = TruthTable.getIDs(this.stack).sort()
+        const ids = TruthTable.getUniqueIDs(this.stack).sort()
         const iterator = new TableIterator(ids)
 
-        const table = [[...ids, this.input]]
+        const table = [['#', ...ids, this.input]]
 
         while(iterator.hasNext()) {
             const next = iterator.next()
             const result = this.evaluate(next)
      
             const line = Object.values(next)
+            line.unshift(iterator.getIteration())
             line.push(result)
             table.push(line)
         }
