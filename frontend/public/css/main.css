@@ -1,0 +1,130 @@
+
+/* Base
+   ========================================================================== */
+
+body {
+    font-family: monospace;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Calculator
+   ========================================================================== */
+
+#screen {grid-area: SCREEN;}
+#btn-a {grid-area: A;}
+#btn-b {grid-area: B;}
+#btn-c {grid-area: C;}
+#btn-d {grid-area: D;}
+#btn-e {grid-area: E;}
+#btn-f {grid-area: F;}
+#btn-and {grid-area: AND;}
+#btn-or {grid-area: OR;}
+#btn-not {grid-area: NOT;}
+#btn-implication {grid-area: IMPLICATION;}
+#btn-biimplication {grid-area: BIIMPLICATION;}
+#btn-result {grid-area: RESULT;}
+#btn-left-parentheses {grid-area: LPARENTHESES;}
+#btn-right-parentheses {grid-area: RPARENTHESES;}
+#btn-backspace {grid-area: BACKSPACE;}
+
+#container-calculator {
+    background-color: #161326;
+}
+
+.calculator-form {
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: auto;
+    justify-items: stretch;
+    align-content: space-around; 
+    gap: 3px;
+    grid-template-areas:
+        "SCREEN SCREEN SCREEN SCREEN SCREEN SCREEN"
+        "A B C D E F"
+        "AND AND OR OR NOT RESULT"
+        "IMPLICATION BIIMPLICATION LPARENTHESES RPARENTHESES BACKSPACE RESULT"
+}
+
+#screen {
+    background-color: #d0e5dc;
+    height: 35px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-width: 6px;
+    border-color: #cbf1e0;
+    outline: none;
+}
+
+.calculator-btn {
+    min-height: 40px;
+    background: linear-gradient(90deg, #9179e1, #5954a3);
+    border-width: 2px 5px 5px 2px;
+    border-color: #7a58cb;
+    border-bottom-color: #6b4db3;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: larger;
+}
+
+.btn-letter {
+    background: linear-gradient(90deg, #5cd574, #4ab78a);
+    border-color: #2ecb35;
+    border-bottom-color: #6fb64e;
+}
+
+.calculator-btn:active {
+    transition: top,left .5s ease;
+    position: relative;
+    left:.5px;
+    top: .5spx;
+    border-width: 2px 1px 1px 2px;
+}
+
+/* Message
+   ========================================================================== */
+
+.container.message-success {
+    background-color: #5ad178;
+    color: #1c4635;
+}
+
+.container.message-error {
+    background-color: #f44336;
+    color: #3e0e0b;
+}
+
+/* Table
+   ========================================================================== */
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    font-size: large;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 7px 30px;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #58cf79;
+    color: white;
+  }
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}

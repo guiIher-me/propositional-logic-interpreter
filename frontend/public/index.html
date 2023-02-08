@@ -5,13 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <form id="form">
-        <label for="input">Formula</label>
-        <input type="text" id="input" name="input">
-        <input type="submit" value="Calculate">
-    </form>
+    <div class="container" id="container-calculator">
+        <form id="form" autocomplete="off">
+            <div class="calculator-form">
+                <input type="text" id="screen" name="input">
+                <button type="button" class="calculator-btn btn-letter" id="btn-a" value="A" aria-label="ID A">A</button>
+                <button type="button" class="calculator-btn btn-letter" id="btn-b" value="B" aria-label="ID B">B</button>
+                <button type="button" class="calculator-btn btn-letter" id="btn-c" value="C" aria-label="ID C">C</button>
+                <button type="button" class="calculator-btn btn-letter" id="btn-d" value="D" aria-label="ID D">D</button>
+                <button type="button" class="calculator-btn btn-letter" id="btn-e" value="E" aria-label="ID E">E</button>
+                <button type="button" class="calculator-btn btn-letter" id="btn-f" value="F" aria-label="ID F">F</button>
+                <button type="button" class="calculator-btn btn-operator" id="btn-and" value="^" aria-label="OPERATOR AND">^</button>
+                <button type="button" class="calculator-btn btn-operator" id="btn-or" value="v" aria-label="OPERATOR OR">v</button>
+                <button type="button" class="calculator-btn btn-operator" id="btn-not" value="~" aria-label="OPERATOR NOT">~</button>
+                <button type="button" class="calculator-btn btn-operator" id="btn-implication" value="->" aria-label="OPERATOR IMPLICATION">-></button>
+                <button type="button" class="calculator-btn btn-operator" id="btn-biimplication" value="<->" aria-label="OPERATOR BIIMPLICATION"><-></button>
+                <button type="button" class="calculator-btn btn-operator" id="btn-left-parentheses" value="(" aria-label="LEFT PARENTHESES">(</button>
+                <button type="button" class="calculator-btn btn-operator" id="btn-right-parentheses" value=")" aria-label="RIGHT PARENTHESES">)</button>
+                <button type="button" class="calculator-btn" id="btn-backspace" value="<-" aria-label="BACKSPACE>">⌫</button>    
+                <button type="submit" class="calculator-btn" id="btn-result" aria-label="RESULT">=</button>                    
+            </div>
+        </form>
+    </div>
+
+    <div class="container hidden" id="container-message"></div>
+    <div class="container hidden" id="container-table"></div>
+    
 </body>
 </html>
