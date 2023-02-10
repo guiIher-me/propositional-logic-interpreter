@@ -14,7 +14,7 @@ Um Interpretador de Lógica Proposicional escrito em Node.js
  - NPM
 
 
-## Como Executar
+## 🚀 Como Executar
 
  1. Na raiz do projeto, acesse o diretório `backend` via linha de
     comando e em seguida inicie o servidor:
@@ -27,7 +27,7 @@ node .
 3. Aproveite!
 
 
-## Gramática
+## 📖 Gramática
 
 A gramática utilizada pelo interpretador pode ser expressada pelo seguinte Formalismo de Backus-Naur Estendido (EBNF):
 
@@ -54,6 +54,6 @@ Exemplos de linguagens **não** aceitas:
 7. ((A)
 ```
 
-## Licença
+## 📜 Licença
 
 Esse projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
