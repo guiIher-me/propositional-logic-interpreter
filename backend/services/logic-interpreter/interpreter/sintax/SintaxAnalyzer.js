@@ -1,10 +1,10 @@
 /**
- * Linguagem livre de contexto
+ * Gramática livre de contexto
  * 
- * E ::= T
- * T ::= F { ( '^' | 'v' | '->' | '<->' ) F }
- * F ::= {'~'} ( '(' E ')' | ID )
- * ID ::= 'A' | 'B' | 'C' | 'D' | 'E' | 'F'
+ * <E> = <T>
+ * <T> = <F> { ( '^' | 'v' | '->' | '<->' ) <F> }
+ * <F> = {'~'} ( '(' <E> ')' | <ID> )
+ * <ID> = 'A' | 'B' | 'C' | 'D' | 'E' | 'F'
  */
 
 const SintaxError = require("../../errors/SintaxError")
