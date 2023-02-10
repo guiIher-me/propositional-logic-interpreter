@@ -56,4 +56,4 @@ Exemplos de linguagens **não** aceitas:
 
 ## Licença
 
-Esse projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Esse projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
