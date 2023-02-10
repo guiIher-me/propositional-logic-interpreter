@@ -90,19 +90,24 @@ document.addEventListener("submit", async (event) => {
 const solve = async (input) => {
     const BASEURL = 'http://localhost:3000'
 
-    const response = await fetch(`${BASEURL}/interpreter`, {
-        mode: 'cors',
-        method: 'POST',
-        cache: 'no-cache',
-        body: JSON.stringify({input}),
-        headers: {
-            "Accept": 'application/json',
-            "Content-type": "application/json; charset=UTF-8"
-        }
-    })
+    try {
+        const response = await fetch(`${BASEURL}/interpreter`, {
+            mode: 'cors',
+            method: 'POST',
+            cache: 'no-cache',
+            body: JSON.stringify({input}),
+            headers: {
+                "Accept": 'application/json',
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
 
-    const data = await response.json()
-    return data
+        const data = await response.json()
+        return data
+    } catch(error) {
+        const message = {type: "error", text: `Server not Found! (Try starting the backend app)`}
+        showMessage(message)
+    } 
 }
 
 const showMessage = (message) => {

@@ -150,11 +150,11 @@ table tr:nth-child(even){
 }
 
 td.data-false {
-    color: #f44336;
+    color: #5e57a9;
 }
 
 td.data-true {
-    color: #01a108;
+    color: #39bb5a;
 }
 
 
