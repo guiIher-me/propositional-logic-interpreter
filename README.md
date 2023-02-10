@@ -3,10 +3,8 @@
 
 Um Interpretador de Lógica Proposicional escrito em Node.js
  
-<video>
-<source src="frontend/public/assets/demo.mov" type="video/mov"  alt="Vídeo de demonstração de uso do interpretador">
-</video>
- 
+https://user-images.githubusercontent.com/20153932/218207611-36c58331-056b-488c-a132-03118ff1ee8a.mp4
+
 
 ## 💻 Pré-requisitos
 
