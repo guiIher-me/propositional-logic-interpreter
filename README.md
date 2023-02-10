@@ -4,7 +4,7 @@
 Um Interpretador de Lógica Proposicional escrito em Node.js
  
 <video>
-<source src="frontend/public/assets/demo.mp4" type="video/mp4"  alt="Vídeo de demonstração de uso do interpretador">
+<source src="frontend/public/assets/demo.mov" type="video/mov"  alt="Vídeo de demonstração de uso do interpretador">
 </video>
  
 
