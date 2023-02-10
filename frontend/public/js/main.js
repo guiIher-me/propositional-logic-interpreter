@@ -79,7 +79,7 @@ document.addEventListener("submit", async (event) => {
     if(data.error) {
         showMessage({type: 'error', text: data.error})
         hiddenTable()
-        return;
+        return
     }
     
     const table = data.table
@@ -107,6 +107,8 @@ const solve = async (input) => {
     } catch(error) {
         const message = {type: "error", text: `Server not Found! (Try starting the backend app)`}
         showMessage(message)
+        hiddenTable()
+        return
     } 
 }
 
