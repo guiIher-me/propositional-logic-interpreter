@@ -14,15 +14,15 @@ https://user-images.githubusercontent.com/20153932/218207611-36c58331-056b-488c-
 
 ## 🚀 Como Executar
 
- 1. Na raiz do projeto, acesse o diretório `backend` via linha de
-    comando e em seguida inicie o servidor:
-
+1. Faça o download do repositório;
+2. No terminal, acesse o diretório `backend`, instale as dependências necessárias e em seguida inicie o servidor:
 ```
 cd backend
+npm install
 node .
 ```
-2. Abra o arquivo `frontend/public/index.html` usando um navegador web moderno.
-3. Aproveite!
+3. Abra o arquivo `frontend/public/index.html` usando um navegador web moderno.
+4. Divirta-se!
 
 
 ## 📖 Gramática
