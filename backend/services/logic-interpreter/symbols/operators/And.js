@@ -6,8 +6,7 @@ class And extends OperatorBinary {
     }
 
     execute(p, q) {
-        return p & q
-        //return And.execute(p, q)
+        return And.execute(p, q)
     }
 }
 
