@@ -1,34 +1,33 @@
 
 # Propositional Logic Interpreter
 
-Um Interpretador de Lógica Proposicional escrito em Node.js
+A Propositional Logic Interpreter written in Node.js
  
 https://user-images.githubusercontent.com/20153932/218207611-36c58331-056b-488c-a132-03118ff1ee8a.mp4
 
 
-## 💻 Pré-requisitos
+## 💻 Prerequisites
 
  - Node.js
  - NPM
 
 
-## 🚀 Como Executar
+## 🚀 How to Execute
 
-1. Faça o download do repositório;
-2. No terminal, acesse o diretório `backend`, instale as dependências necessárias e em seguida inicie o servidor:
+1. Download the repository;
+2. In the terminal, access the `backend` directory, install the necessary dependencies and then start the server:
 ```
 cd backend
 npm install
 node .
 ```
-3. Abra o arquivo `frontend/public/index.html` usando um navegador web moderno.
-4. Divirta-se!
+3. Open the `frontend/public/index.html` file using a modern web browser
+4. Enjoy!
 
 
-## 📖 Gramática
+## 📖 Grammar
 
-A gramática utilizada pelo interpretador pode ser expressada pelo seguinte Formalismo de Backus-Naur Estendido (EBNF):
-
+The grammar used by the interpreter can be expressed by the following Extended Backus-Naur Form (EBNF):
 ```
 <E> = <T>
 <T> = <F> { ( '^' | 'v' | '->' | '<->' ) <F> }
@@ -36,8 +35,7 @@ A gramática utilizada pelo interpretador pode ser expressada pelo seguinte Form
 <ID> = 'A' | 'B' | 'C' | 'D' | 'E' | 'F'
 ```
 
-Exemplos de linguagens aceitas:
-
+Examples of accepted languages:
 ```
 1. A
 2. AvB
@@ -45,13 +43,13 @@ Exemplos de linguagens aceitas:
 4. (AvB)^~(~C)
 ```    
 
-Exemplos de linguagens **não** aceitas:
+Examples of **not** accepted languages:
 ```
 5. Av
 6. A~B
 7. ((A)
 ```
 
-## 📜 Licença
+## 📜 License
 
-Esse projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is licensed under MIT. See the [LICENSE](LICENSE) file for more details.
